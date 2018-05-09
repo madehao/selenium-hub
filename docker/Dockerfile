@@ -3,7 +3,7 @@ FROM selenium/hub
 MAINTAINER madehao1983@sina.com
 
 USER root
-RUN apt install -y locales
+RUN apt-get install -y locales
 
 USER seluser
 ENV TZ="Asia/Shanghai"
