@@ -3,7 +3,7 @@ FROM selenium/hub
 MAINTAINER madehao1983@sina.com
 
 USER root
-RUN localedef -f UTF-8 -i zh_CN zh_CN
+RUN apt install -y locales
 
 USER seluser
 ENV TZ="Asia/Shanghai"
