@@ -7,7 +7,8 @@ RUN apt-get update \
     && apt-get upgrade -y \
     && apt-get install -y locales \
     && apt-get clean \
-    && rm -rf /var/cache/apt/archives/* /var/lib/apt/lists/*
+    && rm -rf /var/cache/apt/archives/* /var/lib/apt/lists/* \
+    && localedef -f UTF-8 -i zh_CN zh_CN.UTF-8
 
 USER seluser
 ENV TZ="Asia/Shanghai"
